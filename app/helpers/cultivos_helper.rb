@@ -1,0 +1,2 @@
+module CultivosHelper
+end

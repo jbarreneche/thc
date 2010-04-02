@@ -33,14 +33,16 @@ module Thc
     # config.i18n.default_locale = :de
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
-    # config.generators do |g|
-    #   g.orm             :active_record
-    #   g.template_engine :erb
-    #   g.test_framework  :test_unit, :fixture => true
-    # end
+    config.generators do |g|
+      g.orm             :mongo_mapper
+      g.template_engine :haml
+      g.test_framework  :rspec
+    end
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password
+    # LightMongo.database = 'thc'
+    MongoMapper.database = 'thc'
   end
 end
 

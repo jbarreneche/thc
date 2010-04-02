@@ -1,4 +1,7 @@
 Thc::Application.routes.draw do |map|
+  resources :cultivos
+
+  root :to => "usuario#hello"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,3 +59,4 @@ Thc::Application.routes.draw do |map|
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
